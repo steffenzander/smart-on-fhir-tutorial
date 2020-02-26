@@ -42,8 +42,8 @@
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-		  var weight = byCodes('8302-2');
-		  var bmi = byCodes('39156-5');
+	  var weight = byCodes('8302-2');
+	  var bmi = byCodes('39156-5');
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -62,8 +62,8 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-	  p.weight = weight;
-	  p.bmi = bmi;
+	  p.weight = getQuantityValueAndUnit(weight[0]);
+	  p.bmi = getQuantityValueAndUnit(bmi[0]);
 		
           ret.resolve(p);
         });
