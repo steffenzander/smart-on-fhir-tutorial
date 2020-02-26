@@ -2,7 +2,7 @@
   window.extractData = function() {
     var ret = $.Deferred();
 
-    function onError() {
+    function onError() { 
       console.log('Loading error', arguments);
       ret.reject();
     }
