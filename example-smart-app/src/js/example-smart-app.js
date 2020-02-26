@@ -18,7 +18,7 @@
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-							  'http://loinc.org|29463-7', 'http://loinc.org|39156-5']
+			      'http://loinc.org|29463-7', 'http://loinc.org|39156-5']
                       }
                     }
                   });
@@ -131,8 +131,8 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-	$('#weight').html(p.weight);
-	$('#bmi').html(p.bmi);
+    $('#weight').html(p.weight);
+    $('#bmi').html(p.bmi);
   };
 
 })(window);
