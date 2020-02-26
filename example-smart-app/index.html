@@ -104,16 +104,15 @@
           $('#errors').html('<p> Failed to call FHIR Service </p>');
         }
       );
+	const client = FHIR.client("https://r2.smarthealthit.org");
+	client.request("Binary/smart-Binary-2-document")
+	.then(res => res.blob())
+	.then(blob => {
+		const image = document.createElement("img");
+		document.body.appendChild(image);
+		image.src = URL.createObjectURL(blob);
+	});
     </script>
-	  <script>
-            const client = FHIR.client("https://r2.smarthealthit.org");
-            client.request("Binary/smart-Binary-2-document")
-            .then(res => res.blob())
-            .then(blob => {
-              const image = document.createElement("img");
-              document.body.appendChild(image);
-              image.src = URL.createObjectURL(blob);
-            });
-        </script>
+	  
   </body>
 </html>
